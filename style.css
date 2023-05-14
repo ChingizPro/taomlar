@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.page {
+    min-height: 100dvh;
+    background-color: #fff5e439;
+    max-width: 2000px;
+    margin: auto;
+    padding: 40px 60px;
+}
+.title {
+    color: #FF9494;
+    text-align: center;
+    font-family: 'Merienda', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.categories {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.category {
+    font-size: 17px;
+    border: 2px solid #FFD1D1;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 4px 15px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+    margin-right: 12px;
+}
+.category:last-of-type {
+    margin-right: 0;
+}
+.category:not(.active):hover {
+    border-color: #FF9494;
+    color: #FF9494;
+}
+.active {
+    background-color: #FF9494;
+    color: #FFF5E4;
+    border-color: #FF9494;
+}
+.meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 36px;
+}
+.meal {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.meal-pic {
+    width: 36%;
+    border-radius: 10px;
+    border: 3px solid #FFD1D1;
+}
+.meal-box {
+    width: 62%;
+}
+.meal-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #FFD1D1;
+    margin-bottom: 10px;
+}
+.meal-name {
+    font-family: 'Merienda', cursive;
+    font-size: 24px;
+    color: #FF9494;
+}
+.meal-text {
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.meal-type {
+    background-color: #FFE3E1;
+    padding: 3px 8px;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: 'Merienda', cursive;
+    font-size: 12px;
+}
+
+@media(max-width:1350px){
+    .meal-pic {
+        width: 320px;
+    }
+    .meal-box {
+        width: 100%;
+    }
+}
+@media(max-width:700px){
+    .page {
+        padding: 20px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .meals {
+        row-gap: 27px;
+    }
+    .meal-name {
+        font-size: 22px;
+    }
+    .categories {
+        margin-bottom: 36px;
+    }
+    .category {
+        margin: 7px;
+    }
+}
+@media(max-width:500px){
+    .meal {
+        width: 100%;
+    }
+    .meal-pic {
+        width: 100%;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .categories {
+        margin-bottom: 27px;
+    }
+    .category {
+        font-size: 16px;
+        margin: 5px;
+    }
+}
